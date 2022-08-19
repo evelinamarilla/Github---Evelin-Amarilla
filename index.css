@@ -1,0 +1,234 @@
+* {
+box-sizing: border-box;
+margin: 1px;
+padding: 2px;
+}
+
+html {
+    height: 100%;
+}
+
+img{
+    display: flex;
+    max-width: 150px;
+    height: 100px;
+}
+
+.logo{
+    display: flex;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+} 
+
+.grid-container *{
+    border-radius: 5px;
+    text-align: center;
+}
+.header{
+    height: auto;
+    width: auto;
+    display: flex;
+    grid-area: header;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color:rgb(255, 255, 70);
+}
+
+.main{
+    grid-area:main;
+    background-color: rgb(241, 241, 142);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: auto;
+    display: grid;
+}
+
+.servicios{
+    font-size: x-small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(238, 238, 170);
+}
+
+.tituloservicios{
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+}
+.ubicacion{
+    background-color: rgb(235, 235, 137);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px;
+
+}
+.formulario{
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(22, 22, 20); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color:rgb(22, 22, 20); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #302d2f; 
+    border-color: #2c2c29; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  button p{
+    color: #fff; 
+  }
+
+  span{
+    color: #181617; 
+  }
+  
+  
+  .aviso{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+  h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #131212;
+  }
+  
+  p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+  }
+
+  .mapa{
+    font-size: x-small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(238, 238, 170);
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px
+  }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+
+.item{
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    padding: 3rem;
+    background: mistyrose;
+    margin: 6px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "footer"  100px;
+}
+
+
+@media (min-width: 600px){
+   .grid-container {
+     grid-template:
+     "header header"   100px
+     "navbar main"     auto
+     "footer footer"   100px /
+     200px  auto;
+   }
+}
+
+@media (min-width: 900px){
+    .grid-container {
+      grid-template:
+      "header header"   100px
+      "navbar main "    auto
+      "footer footer"   100px /
+      200px  auto;
+    }
+ }
